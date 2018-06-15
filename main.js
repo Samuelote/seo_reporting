@@ -1,9 +1,38 @@
+
+
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const { app, BrowserWindow, ipcMain, shell } = require('electron');
+
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
+
+// const webview = document.querySelector('webview');
+// let scriptStr = (
+//   "var input = document.querySelector('#urlinput');"+
+//   "var btn = document.querySelector('.button-starttest');"+
+//   "var grade = 'p';"+
+//   "input.value = 'beachtrans.com';"+
+//   "setTimeout(()=>btn.click(),4000);"+
+//   "var content = document.querySelector('#content');"+
+//   // "console.log(input);"+
+//   "console.log(content);"+
+//   "(function tryToGrade() {"+
+//     "var grade = document.querySelector('.rbc-summary-perfgrade.first div.rbc-summary-info-value');"+
+//     "if (grade != null){"+
+//       "console.log('grade', grade.innerText.split(' ')[1]);"+
+//     "} else {setTimeout(()=>tryToGrade(), 1000)}" +
+//   "})();"
+// );
+// function init() {
+//   console.log('fired init!')
+//   webview.addEventListener('dom-ready', () => {
+//     webview.executeJavaScript(scriptStr);
+//     webview.openDevTools()
+//   })
+// }
+
 
 function createWindow () {
   // Create the browser window.
@@ -21,6 +50,9 @@ function createWindow () {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     mainWindow = null
+  })
+  mainWindow.webContents.on('did-finish-load', () => {
+    mainWindow.webContents.send('ping', 'whoooooooh!')
   })
 }
 
