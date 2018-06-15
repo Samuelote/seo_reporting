@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel = "stylesheet"
-   type = "text/css"
-   href = "app.css" />
+    <link rel = "stylesheet" type = "text/css" href = "app.css" />
+    <link rel = "stylesheet" type = "text/css" href = "./script/speed_test/style.css" />
     <meta charset="UTF-8">
     <title>SEO REPORT</title>
   </head>
@@ -13,7 +12,8 @@
     <webview src="https://tools.pingdom.com/" preload='./script/wvCom.js'></webview>
 
     <script>
-      require('./script/renderer.js')
+      require('./script/broken_link_test/linkChecker.js')
+      require('./script/speed_test/main.js')
 
     </script>
   </body>

@@ -1,5 +1,4 @@
 const { ipcRenderer } = require('electron');
-
 window.test = "Error. Please Run Again";
 
 ipcRenderer.on('speed-message', (e) => {
