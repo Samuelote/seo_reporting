@@ -22,6 +22,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "broken-link-checker": "^0.7.8",
+    "bs-broken-links-checker": "^0.2.0",
     "global": "^4.3.2"
   }
 }
