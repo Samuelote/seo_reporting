@@ -3,6 +3,10 @@ const brokenLinksChecker = new BrokenLinksChecker();
 const axios = require('axios');
 const url = 'http://beachtrans.com';
 
+
+exports.analyze = () => {
+  alert('asdf')
+}
 let sitePaths = [];
 let linksToCheck = [];
 
@@ -60,10 +64,10 @@ function checkLinks(){
   loadingCall('http://beachtrans.com/wp-content/uploads/2016/08/legal-disclaimer.pdf', checkIfBroken)
 }
 function checkIfBroken(site){
-    console.log(brokenLinksChecker.start(site));
+    // brokenLinksChecker.start(site)
 }
 
 
 // console.log(sitePaths.length)
 // loadingCall(url, sortLinks);
-checkIfBroken('http://beachtrans.com/wp-content/uploads/2016/08/legal-disclaimer.pdf')
+checkIfBroken('https://stackoverflow.com/questions/12099092/javascript-equivalent-of-phps-hash-hmac-with-raw-binary-output')

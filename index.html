@@ -9,11 +9,12 @@
   <body>
     <div id='speed'>Speed is</div>
     <div id='Broken Links'># of Broken Links: </div>
-    <webview src="https://tools.pingdom.com/" preload='./script/wvCom.js'></webview>
+    <webview src="https://tools.pingdom.com/" preload='./script/speed_test/wvCom.js'></webview>
 
     <script>
-      require('./script/broken_link_test/linkChecker.js')
-      require('./script/speed_test/main.js')
+      // require('./script/broken_link_test/linkChecker.js')
+      // require('./script/speed_test/main.js')
+      require('./script/controller.js')
 
     </script>
   </body>
