@@ -1,4 +1,4 @@
-#SEO Report
+# SEO Report
 
 This is an Electron project to help automate client's SEO reporting that we do at First Call Computer Solutions. 
 
